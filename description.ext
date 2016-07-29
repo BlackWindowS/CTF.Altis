@@ -1,0 +1,302 @@
+respawn= "BASE";
+
+briefing = 0;
+
+debriefing = 0;
+
+showMap = 1;
+
+showGPS = 1;
+
+disabledAI = 1;
+
+showCompass=1;
+
+disableChannels[]={3,2,6,4,3};
+
+enableDebugConsole = 1;
+
+titleParam1 = "Time of Day";
+valuesParam1[] = {0,8,14,20};
+textsParam1[] = {"Mid Day","Dusk","Midnight","Morning"};
+defaultParam1 = 16;
+ 
+class Header
+{
+	gameType = TDM;
+	minPlayers = 1;
+	maxPlayers = 40;
+};
+
+author="[B.w.S] SoP";
+
+OnLoadName = "TMD - CTF - Map Rotation";
+
+OnLoadMission = "15 min rounds";
+
+respawndelay = 5;
+
+respawndialog = 1;
+
+respawnTemplates[] = {"MenuInventory","Counter","MenuPosition","Base"};
+
+class CfgRespawnInventory
+{
+	class WEST1
+	{
+		displayName = "Infiltrator"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"arifle_Mk20_ACO_F",
+			"hgun_Pistol_heavy_01_snds_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"30Rnd_556x45_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag",
+			"30Rnd_556x45_Stanag",
+			"30Rnd_556x45_Stanag",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell"
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"muzzle_snds_M",
+			"optic_MRD",
+			"V_Chestrig_khk",
+			"H_Watchcap_blk",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+		
+	class WEST2 
+	{
+		displayName = "Soldier"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"arifle_Katiba_F",
+			"hgun_Rook40_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"30Rnd_65x39_caseless_green",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"30Rnd_65x39_caseless_green",
+            "30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green",
+			"SmokeShell",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade"
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"optic_Arco",
+			"optic_MRD",
+			"V_Chestrig_khk",
+			"H_Watchcap_blk",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+	class WEST3 
+	{
+		displayName = "Machine-Gun"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"LMG_Zafir_F",
+			"hgun_Rook40_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"150Rnd_762x54_Box",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+            "150Rnd_762x54_Box",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell"
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_Chestrig_khk",
+			"optic_MRD",
+			"H_Watchcap_blk",
+			"optic_Aco",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+	class WEST4 
+	{
+		displayName = "Sniper"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"srifle_LRR_F",
+			"hgun_Pistol_heavy_02_Yorris_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"7Rnd_408_Mag",
+			"6Rnd_45ACP_Cylinder",
+			"6Rnd_45ACP_Cylinder",
+			"6Rnd_45ACP_Cylinder",
+			"6Rnd_45ACP_Cylinder",
+            "7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell"
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_Chestrig_khk",
+			"optic_DMS",
+			"H_Watchcap_blk",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+	class WEST5 
+	{
+	
+		displayName = "Grenade"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"arifle_Katiba_GL_ACO_F",
+			"hgun_Rook40_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"30Rnd_65x39_caseless_green",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+            "30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green",
+			"30Rnd_65x39_caseless_green",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell"
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"V_Chestrig_khk",
+			"optic_MRD",
+			"H_Watchcap_blk",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+	class WEST6 
+	{
+		displayName = "Thermal-Vision"; // Name visible in the menu
+		icon = "iconMan"; // Icon displayed next to the name
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"Binocular",
+			"hgun_PDW2000_F"
+		};
+		magazines[] = {
+			"16Rnd_9x21_Mag"
+
+		};
+		items[] = {
+			"FirstAidKit"
+		};
+		linkedItems[] = {
+			"H_Watchcap_blk",
+			"optic_Nightstalker",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		backpack = "B_AssaultPack_mcamo";
+	};
+};
